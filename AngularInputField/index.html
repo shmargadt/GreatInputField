@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<script src="input_ctl.js"></script>
+<script src="angular.js"></script>
+
+<body ng-app="AnulgarInput" ng-controller="InputCtrl">
+
+<input ng-model="input_text" />
+
+<div ng-click="renderText(input_text)">Convert text</div>
+
+<div>{{result_text}}</div>
+
+</body>
+</html>
