@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 
-<script src="input_ctl.js"></script>
-<script src="angular.js"></script>
 
-<body ng-app="AnulgarInput" ng-controller="InputCtrl">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="input_ctl.js"></script>
 
-<input ng-model="input_text" />
+  <body ng-app="AnulgarInput" ng-controller="InputCtrl">
 
-<div ng-click="renderText(input_text)">Convert text</div>
+    <input ng-model="input_text" />
 
-<div>{{result_text}}</div>
+    <div ng-click="renderText(input_text)">Convert text</div>
 
-</body>
+    <div ng-bind-html="result_text"></div>
+
+  </body>
 </html>

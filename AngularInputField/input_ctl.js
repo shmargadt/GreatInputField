@@ -1,14 +1,15 @@
 var app = angular.module("AnulgarInput", []); 
 
-app.controller("InputCtrl", function($scope) {
+app.controller("InputCtrl", function ($scope, $sce) {
 
 
  $scope.renderText = function (text) {
      var res = changeBiggerThanToQuote(text);
      res = changeAsteriskToBold(res);
      res = changeUnderScoreToItalic(res);
-     $scope.result_text = res;
+     $scope.result_text = $sce.trustAsHtml(res);
   };
+
 
  var changeBiggerThanToQuote = function (text) {
     if (!text) { return; }
