@@ -4,8 +4,8 @@ It lets a variety of different ways to format the writing you submit using a num
 
 Here are the ways you can use them to make your messages clearer.
 
- - To make content bold, place *asterisks around it*.
- - To italicize content, place _underscores around it_.
+ - To make content bold, place asterisks around it(*).
+ - To italicize content, place underscores around it(_).
  - To quote content, place a less than sign (<) in front of it.
 
 #Architecture of the project:
