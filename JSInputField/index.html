@@ -5,11 +5,12 @@
   var converText = function  () {
         var inputField = document.getElementById("inputField").value;
         var resultText = document.getElementById("resultText");
+        if (!inputField) {resultText.innerHTML =""; return;}
         resultText.innerHTML = renderText(inputField);
   }
 
  var renderText = function (text) {
-     var res = changeBiggerThanToQuote(text);
+     var res = "<div class='result-title'> Result:</div>" +changeBiggerThanToQuote(text);
      res = changeAsteriskToBold(res);
      res = changeUnderScoreToItalic(res);
      return res;
@@ -78,12 +79,73 @@
  } 
 
 </script>
+<style>
+  body {
+      background-color: linen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .title {
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+    color: maroon;
+  }
+
+  .great-input {
+    margin-top: 30px;
+    height: 20px;
+    width: 160px;
+  }
+
+ .convert-btn {
+      background-color: maroon;
+      color: linen;
+      text-align: center;
+      margin-top: 20px;
+      height: 20px;
+      width: 164px;
+      border-radius: 10px;
+  }
+
+  .result-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  } 
+
+  .result {
+    margin-top: 15px;
+    font-size: 15px;
+    width: 164px;
+    text-align: left;
+    color: maroon;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 20px;
+    padding-left: 1%;
+    background-color: maroon;
+    color: linen;
+  }
+  .instr{
+    margin-top: 3px;
+  }
+</style>
 <body>
 
-<input id="inputField"  />
+<div class="title"> MY GREAT INPUT </div>
+<input id="inputField" class="great-input" />
+<div class="instr"> *bold* _italics_  >qoute </div>
+<div id="button" onclick="converText()" class="convert-btn">Convert text</div>
 
-<div id="button" onclick="converText()">Convert text</div>
+<div id="resultText" class="result"> </div>
 
-<div id="resultText"> </div>
+<div class="footer"> Created By Tomer Shmargad, Learning By Doing </div>
 </body>
 </html>
