@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 
-
+<head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="input_ctl.js"></script>
+  <link rel="stylesheet" type="text/css" href="input.css">
+</head>
+
 
   <body ng-app="AnulgarInput" ng-controller="InputCtrl">
 
-    <input ng-model="input_text" />
+    <div class="title"> MY GREAT INPUT </div>
+    <input ng-model="input_text" class="great-input" />
 
-    <div ng-click="renderText(input_text)">Convert text</div>
 
-    <div ng-bind-html="result_text"></div>
+    <div class="instr"> *bold* _italics_  >qoute </div>
+    <div ng-click="renderText(input_text)" class="convert-btn">Convert text</div>
 
+    <div ng-bind-html="result_text" class="result"></div>
+
+    <div class="footer">&copy; Created By Tomer Shmargad - Learning By Doing, 2016 </div>
   </body>
 </html>
