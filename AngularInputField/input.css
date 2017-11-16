@@ -20,6 +20,7 @@
   }
 
  .convert-btn {
+      cursor: pointer;
       background-color: maroon;
       color: linen;
       text-align: center;
