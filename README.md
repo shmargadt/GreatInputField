@@ -8,7 +8,7 @@ Here are the ways you can use them to make your messages clearer.
  - To italicize content, place underscores around it(_).
  - To quote content, place a less than sign (<) in front of it.
 
-#Architecture of the project:
+#Menu of the project:
  /
   - AngularInputField - html + Angular;
   - JSInputField - html + js;
