@@ -18,7 +18,6 @@ class GreatInput extends Component {
     const result_title = "<div class='result-title'> Result:</div>";
     if (!this.state.input) {return;}
     this.setState({new_input: result_title + this.changeAsteriskToBold(this.state.input)});
-    console.log(this.state.new_input);
   }
 
    onChangeInput = function (e) {
@@ -52,10 +51,10 @@ class GreatInput extends Component {
   render() {
     return (
       <div >
-        <div class="title"> MY GREAT INPUT </div>
-        <input onChange={this.onChangeInput} id="" class="great-input" />
-        <div class="instr"> *bold* _italics_  >qoute </div>
-        <div onClick={this.onRenderNewInput} class="convert-btn">Convert text</div>
+        <div className="title"> MY GREAT INPUT </div>
+        <input onChange={this.onChangeInput} id="" className="great-input" />
+        <div className="instr"> *bold* _italics_  >qoute </div>
+        <div onClick={this.onRenderNewInput} className="convert-btn">Convert text</div>
         <div dangerouslySetInnerHTML={{__html: this.state.new_input}}></div>
       </div>
     );
