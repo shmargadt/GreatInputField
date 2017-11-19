@@ -3,11 +3,11 @@
     MY GREAT INPUT
   </h1>
 </div>
-<input class=""  type="text"/>
+<input class=""  type="text" [(ngModel)]="inputFieldString"/>
 <h2>*bold* _italics_ >qoute</h2>
-<div class="convert-btn">Convert text</div>
+<div class="convert-btn" (click)="converText()">Convert text</div>
 <div class="result-title">Result:</div>
-<div class="result">{{result}}</div>
+<div class="result" [innerHTML]="theHtmlResultString"></div>
 
 <div class="footer">© Created By Tomer Shmargad - Learning By Doing, 2016 </div>
 
