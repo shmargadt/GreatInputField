@@ -5,7 +5,7 @@ Vue.component('input-component', {
               '<input v-model="inputText" />' +
               '<div class="instr"> *bold* _italics_  >qoute </div>' +
               '<div @click="renderText" class="convert-btn">Convert text</div>' +
-              '<div class="result">{{resultText}}</div>' +
+              '<div class="result" v-html="resultText"></div>' +
               '<div class="footer">&copy; Created By Tomer Shmargad - Learning By Doing, 2016 </div>' +
             '</div>', 
   data: function() {
@@ -22,6 +22,7 @@ Vue.component('input-component', {
       res = this.makeSignToHtml(res, '*', '<b>', '</b>');
       res = this.makeSignToHtml(res, '_', '<i>', '</i>');
       if (!text) {this.resultText = ""; return;}
+      this.resultText = res
      //  $scope.result_text = $sce.trustAsHtml(res);
     },
     changeBiggerThanToQuote (text) {
