@@ -23,7 +23,6 @@ Vue.component('input-component', {
       res = this.makeSignToHtml(res, '_', '<i>', '</i>');
       if (!text) {this.resultText = ""; return;}
       this.resultText = res
-     //  $scope.result_text = $sce.trustAsHtml(res);
     },
     changeBiggerThanToQuote (text) {
       if (!text) { return; }
