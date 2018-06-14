@@ -9,10 +9,11 @@ Here are the ways you can use them to make your messages clearer.
  - To quote content, place a less than sign (<) in front of it.
 
 #Menu of the project:
- /
+ 
   - AngularInputField - html + Angular;
   - JSInputField - html + js;
   - ReactInputField - html + React;
+  - VueInputField - html + Vue;
 
  In order to run the project:
- /path/to/folder/ + "<FOLDER_FROM_PROJECT>" + index.html
+ /path/to/folder/ + "<FOLDER_FROM_PROJECT>" + /index.html
