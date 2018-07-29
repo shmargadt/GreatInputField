@@ -37,6 +37,9 @@ app.controller("InputCtrl", function ($scope, $sce) {
     var res = '';
     var flag = false;
     new_text = text.replace(/(?:\r\n|\r|\n)/g, '<br />');
+    var open_and_close_sign = 2
+    var num_of_signs = text.split(sign).length -1
+    if ( num_of_signs !== open_and_close_sign ) { return new_text ;} 
     for (var i = 0; i < new_text.length; i++) {
       if (new_text[i] === sign) {
         if (flag === false) {
