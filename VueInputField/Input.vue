@@ -47,6 +47,9 @@ Vue.component('input-component', {
       let res = '';
       let flag = false;
       newText = text.replace(/(?:\r\n|\r|\n)/g, '<br />');
+      const openAndCloseSign = 2
+      const numOfSigns = text.split(sign).length -1
+      if ( numOfSigns !== openAndCloseSign ) { return newText ;} 
       for (var i = 0; i < newText.length; i++) {
         if (newText[i] === sign) {
           if (flag === false) {
